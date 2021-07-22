@@ -39,7 +39,7 @@ def main(core_page):
                 nw_data.loc[len(nw_data.index)] = [name, status, nw_type, url]
             # If there is no 'response' there still could be useful data, check if there is only 'request'
             elif 'request' in log_params.keys():
-                status = 'unknown'
+                status = '*200.0'
                 url = log_params['request']['url']
                 name = url.split('/')[len(url.split('/')) - 1]
                 nw_data.loc[len(nw_data.index)] = [name, status, nw_type, url]
